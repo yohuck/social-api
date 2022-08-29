@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
+  },
+  "name": "social-api-mongo",
+  "version": "1.0.0",
+  "description": "Social media api using mongodb",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohuck/social-api.git"
+  },
+  "author": "Eric Lake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohuck/social-api/issues"
+  },
+  "homepage": "https://github.com/yohuck/social-api#readme"
+}
