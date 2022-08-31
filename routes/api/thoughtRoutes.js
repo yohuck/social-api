@@ -5,7 +5,9 @@ const {
     getSingleThought,
     createThought,
     updateThought,
-    deleteThought
+    deleteThought,
+    addReaction,
+    deleteReaction,
 
     
 
@@ -21,5 +23,10 @@ router.route('/:thoughtId')
 .get(getSingleThought)
 .put(updateThought)
 .delete(deleteThought)
+
+// /api/thought/:thoughtId/reactions
+router.route('/:thoughtId/reactions')
+.post(addReaction)
+.delete(deleteReaction)
 
 module.exports = router

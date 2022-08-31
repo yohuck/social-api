@@ -1,5 +1,6 @@
 const {Schema, Types} = require('mongoose')
 
+
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -8,8 +9,7 @@ const reactionSchema = new Schema(
         },
         reactionBody: {
             type: String,
-            required: true,
-            match: /^([a-z0-9_\.-]{1,280})$/
+            required: true
         },
         username: {
             type: String,
