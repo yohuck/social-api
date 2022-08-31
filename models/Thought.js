@@ -7,7 +7,7 @@ const thoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: true,
-            match: /^([a-z0-9_\.-]{1,280})$/
+            match: /([a-z0-9_\.]{1,280})/
         },
         createdAt: {
             type: Date,
@@ -32,4 +32,10 @@ const thoughtSchema = new Schema(
     }
 )
 
+thoughtSchema.virtual('reactionCount').get(function(){
+    return this.reactions.length
+})
+
 const Thought = model('thought', thoughtSchema)
+
+module.exports = Thought;

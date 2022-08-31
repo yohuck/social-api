@@ -5,12 +5,15 @@ module.exports = {
     //Get all Users
     getUsers(req, res) {
         User.find()
+        .populate('friends')
+        .populate('thoughts')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err))
     },
       // Get a user
     getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
+      .populate('friends')
       .select('-__v')
       .then((user) =>
         !user
